@@ -23,3 +23,11 @@ def get_yes_or_no_for_settings(option, default):
         print('Invalid input. please enter y or n.')
  
  
+def get_settings_from_user(settings):
+
+    for option, default in settings.items():
+        if option != 'length':
+            get_yes_or_no_for_settings(option, default)
+
+
+# get_settings_from_user(settings)
