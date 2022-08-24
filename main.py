@@ -85,16 +85,16 @@ def generate_random_char(choices):
         return ' '
 
 
-# def password_generator(settings):
-#     final_password = ''
-#     password_length = settings['length']
+def password_generator(settings):
+    final_password = ''
+    password_length = settings['length']
 
-#     choices = list(filter(lambda x: settings[x], ['upper', 'lower', 'symbol', 'space', 'number']))
+    choices = list(filter(lambda x: settings[x], ['upper', 'lower', 'symbol', 'space', 'number']))
     
-#     for i in range(password_length):
-#         final_password += generate_random_char(choices)
+    for i in range(password_length):
+        final_password += generate_random_char(choices)
     
-#     return final_password
+    return final_password
     
     
 set_settings(settings)
