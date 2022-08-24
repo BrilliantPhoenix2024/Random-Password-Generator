@@ -1,5 +1,6 @@
+import random
+import string
  
-
 settings ={
     'lower' : True,
     'upper': True,
@@ -12,7 +13,8 @@ settings ={
 
 def get_user_password_length(option, default, pw_min_length=4, pw_max_length=30):
     while True:
-        user_input = input(f'Enter your passworg length. (Default is {default}) (enter : default): ')
+        user_input = input('Enter your passworg length.'
+                           f'(Default is {default}) (enter : default): ')
         
         if user_input == '':
             return default
@@ -30,7 +32,8 @@ def get_user_password_length(option, default, pw_min_length=4, pw_max_length=30)
             
 def get_yes_or_no_for_settings(option, default):
     while True:
-        user_input = input(f'Include {option}? (Default is {default}) (y: yes, n: no, enter: default): ')
+        user_input = input(f'Include {option}? (Default is {default})'
+                           '(y: yes, n: no, enter: default): ')
         
         if user_input == '':
             return default
@@ -51,4 +54,49 @@ def set_settings(settings):
             settings[option] = user_password_length
 
 
+def get_random_upper_case():
+    return random.choice(string.ascii_uppercase)
+
+
+# def get_random_lower_case():
+    return random.choice(string.ascii_lowercase)
+
+
+# def get_random_number():
+    return random.choice("0123456789")
+
+
+# def get_random_symbol():
+#     return random.choice("""~!@#$%^&*(/)–_=+["]{|};:<\>?""")
+
+
+# def generate_random_char(choices):
+#     choice = random.choice(choices)
+    
+#     if choice == 'upper':
+#         return get_random_upper_case()
+#     if choice == 'lower':
+#         return get_random_lower_case()
+#     if choice == 'number':
+#         return get_random_number()
+#     if choice == 'symbol':
+#         return get_random_symbol()
+#     if choice == 'space':
+#         return ' '
+
+
+# def password_generator(settings):
+#     final_password = ''
+#     password_length = settings['length']
+
+#     choices = list(filter(lambda x: settings[x], ['upper', 'lower', 'symbol', 'space', 'number']))
+    
+#     for i in range(password_length):
+#         final_password += generate_random_char(choices)
+    
+#     return final_password
+    
+    
 set_settings(settings)
+# print(password_generator(settings))
+print(settings)
