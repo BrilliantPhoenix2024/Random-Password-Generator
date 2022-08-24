@@ -70,19 +70,19 @@ def get_random_symbol():
     return random.choice("""~!@#$%^&*(/)–_=+["]{|};:<\>?""")
 
 
-# def generate_random_char(choices):
-#     choice = random.choice(choices)
+def generate_random_char(choices):
+    choice = random.choice(choices)
     
-#     if choice == 'upper':
-#         return get_random_upper_case()
-#     if choice == 'lower':
-#         return get_random_lower_case()
-#     if choice == 'number':
-#         return get_random_number()
-#     if choice == 'symbol':
-#         return get_random_symbol()
-#     if choice == 'space':
-#         return ' '
+    if choice == 'upper':
+        return get_random_upper_case()
+    if choice == 'lower':
+        return get_random_lower_case()
+    if choice == 'number':
+        return get_random_number()
+    if choice == 'symbol':
+        return get_random_symbol()
+    if choice == 'space':
+        return ' '
 
 
 # def password_generator(settings):
