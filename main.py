@@ -66,8 +66,8 @@ def get_random_number():
     return random.choice("0123456789")
 
 
-# def get_random_symbol():
-#     return random.choice("""~!@#$%^&*(/)–_=+["]{|};:<\>?""")
+def get_random_symbol():
+    return random.choice("""~!@#$%^&*(/)–_=+["]{|};:<\>?""")
 
 
 # def generate_random_char(choices):
