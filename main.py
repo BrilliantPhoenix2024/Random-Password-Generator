@@ -62,8 +62,8 @@ def get_random_lower_case():
     return random.choice(string.ascii_lowercase)
 
 
-# def get_random_number():
-#     return random.choice("0123456789")
+def get_random_number():
+    return random.choice("0123456789")
 
 
 # def get_random_symbol():
