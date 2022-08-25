@@ -120,13 +120,13 @@ def ask_user_another_password():
             print('Invalid input, Please enter (y: yes, n: no, enter:yes).')
             
                     
-# def password_generator_loop(settings):
-#     while True:
-#         print('-'*20)
-#         print(f'Your Random Password: {password_generator(settings)}')
+def password_generator_loop(settings):
+    while True:
+        print('-'*20)
+        print(f'Your Random Password: {password_generator(settings)}')
         
-#         if ask_user_another_password() == False:
-#             break
+        if ask_user_another_password() == False:
+            break
             
     
 def run():    
