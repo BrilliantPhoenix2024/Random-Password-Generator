@@ -102,7 +102,10 @@ def password_generator(settings):
     return final_password
     
 
-clear_screen()    
-set_settings(settings)
-print(password_generator(settings))
-print(settings)
+def run():    
+    clear_screen()    
+    set_settings(settings)
+    print(password_generator(settings))
+
+
+run()
