@@ -65,6 +65,20 @@ def set_settings(settings):
             settings[option] = user_password_length
 
 
+def ask_if_change_settings(settings):
+    while True:
+        user_answer = input('Do you want to change Defaule settings generator?'
+                            '(y:yes, n:no, enter:yes): ')
+        print('-'*20, 'Change Settings', '-'*20)
+        
+        if user_answer in ['y', 'n', '']:
+            if user_answer in ['y', '']:
+                set_settings(settings)
+            break
+        else:
+            print('Invalid input.Please enter (y:yes, n:no, enter:yes).')
+        
+      
 def get_random_upper_case():
     return random.choice(string.ascii_uppercase)
 
@@ -131,7 +145,7 @@ def password_generator_loop(settings):
     
 def run():    
     clear_screen()   
-    set_settings(settings)
+    ask_if_change_settings(settings)
     password_generator_loop(settings)
     print('Thank you for choosing us.')
 
