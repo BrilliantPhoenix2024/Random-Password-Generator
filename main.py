@@ -1,6 +1,10 @@
 import random
 import string
 import os
+
+
+PASSWORD_MIN_LENGTH = 4
+PASSWORD_MAX_LENGTH = 30
  
  
 settings ={
@@ -16,10 +20,11 @@ def clear_screen():
     os.system('cls')
     
         
-def get_user_password_length(option, default, pw_min_length=4, pw_max_length=30):
+def get_user_password_length(option, default, pw_min_length=PASSWORD_MIN_LENGTH, pw_max_length=PASSWORD_MAX_LENGTH):
     while True:
-        user_input = input('Enter your passworg length.'
-                           f'(Default is {default}) (enter : default): ')
+        user_input = input('Enter your passworg length. '
+                           f'(Default is {default})'
+                           '(enter : default): ')
         
         if user_input == '':
             return default
@@ -37,7 +42,8 @@ def get_user_password_length(option, default, pw_min_length=4, pw_max_length=30)
             
 def get_yes_or_no_for_settings(option, default):
     while True:
-        user_input = input(f'Include {option}? (Default is {default})'
+        user_input = input(f'Include {option}? '
+                           f'(Default is {default}) '
                            '(y: yes, n: no, enter: default): ')
         
         if user_input == '':
@@ -105,7 +111,8 @@ def password_generator(settings):
 def run():    
     clear_screen()    
     set_settings(settings)
-    print(password_generator(settings))
+    print('-'*20)
+    print(f'Your Random Password: {password_generator(settings)}')
 
 
 run()
