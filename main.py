@@ -78,7 +78,7 @@ def get_random_number():
 
 
 def get_random_symbol():
-    return random.choice("""~!@#$%^&*(/)–_=+["]{|};:<\>?""")
+    return random.choice("""~!@#$%^&*(/)–_=+["]{|}<\>?""")
 
 
 def generate_random_char(choices):
@@ -108,11 +108,32 @@ def password_generator(settings):
     return final_password
     
 
+def ask_user_another_password():
+    while True:
+        print('-'*20)
+        user_answer = input('Regenerate another password? (y: yes, n: no, enter:yes): ')
+        if user_answer in ['y', 'n', '']:
+                if user_answer == 'n':
+                    return False
+                return True
+        else:
+            print('Invalid input, Please enter (y: yes, n: no, enter:yes).')
+            
+                    
+# def password_generator_loop(settings):
+#     while True:
+#         print('-'*20)
+#         print(f'Your Random Password: {password_generator(settings)}')
+        
+#         if ask_user_another_password() == False:
+#             break
+            
+    
 def run():    
-    clear_screen()    
+    clear_screen()   
     set_settings(settings)
-    print('-'*20)
-    print(f'Your Random Password: {password_generator(settings)}')
+    password_generator_loop(settings)
+    print('Thank you for choosing us.')
 
 
 run()
